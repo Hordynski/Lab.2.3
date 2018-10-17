@@ -52,7 +52,15 @@ namespace Lab._2._3
                     Console.WriteLine("I'm sorry user. I do not recognize that input.");
                 }
                 Console.Write("Would you like to run this program again? Y or N: ");
+
+                // James - this is interesting, converting it into a character, I think this is pretty cool.
+                // however the reason I would avoid converting into a char because it takes computation to 
+                // do the conversion, and ReadLine() already returns a string, and a string has the 
+                // string.Equals() method which will let you check for lower case without having to check
+                // both instances of 'y', and 'Y'.  but don't get me wrong, I still like that you used a 
+                // char, you are thinking creativly. 
                 char repeat = Convert.ToChar(Console.ReadLine());
+
                 if (repeat == 'Y' || repeat == 'y')
                 {
                     doAgain = true;
